@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Upcoming events</h1>
+  <p>{{ events| Length }} events planned.</p>
+  <div class="cards">
+    <article class="cars">
+      <h2>{{ events[0].Title }}</h2>
+      <p>{{ events[0].EventDate }} at {{ events[0].StartTime }}</p>
+      <a href="/events/1">Details</a>
+    </article>
+    <article class="cars">
+      <h2>{{ events[1].Title }}</h2>
+      <p>{{ events[1].EventDate }} at {{ events[1].StartTime }}</p>
+      <a href="/events/2">Details</a>
+    </article>
+     <article class="cars">
+      <h2>{{ events[2].Title }}</h2>
+      <p>{{ events[2].EventDate }} at {{ events[2].StartTime }}</p>
+      <a href="/events/3">Details</a>
+    </article>
+</body>
+
+</html>
