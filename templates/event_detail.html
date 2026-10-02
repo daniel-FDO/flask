@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{event.Title}}</h1>
+    <table class="details">
+    <tr><th>Date</th><td>{{event.EventDate}}</td></tr>
+    <tr><th>Time</th><td>{{event.StartTime}} to {{event.EndTime}}</td></tr>
+    <tr><th>Location</th><td>{{event.Location}}</td></tr>
+    <tr><th>Places</th><td>{{event.Capacity}}</td></tr>
+    </table>
+    <a href="/events">Back to all events</a>
+</body>
+</html>
