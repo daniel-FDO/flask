@@ -13,6 +13,6 @@
     <tr><th>Location</th><td>{{event.Location}}</td></tr>
     <tr><th>Places</th><td>{{event.Capacity}}</td></tr>
     </table>
-    <a href="/events">Back to all events</a>
+    <a href="{{url_for('event_list', event_id=events[2].EventID)}}">Back to all events</a>
 </body>
 </html>
