@@ -14,17 +14,17 @@
     <article class="cars">
       <h2>{{ events[0].Title }}</h2>
       <p>{{ events[0].EventDate }} at {{ events[0].StartTime }}</p>
-      <a href="/events/1">Details</a>
+      <a href="{{url_for('event_detail', event_id=events[0].EventID)}}">Details</a>
     </article>
     <article class="cars">
       <h2>{{ events[1].Title }}</h2>
       <p>{{ events[1].EventDate }} at {{ events[1].StartTime }}</p>
-      <a href="/events/2">Details</a>
+      <a href="{{url_for('event_detail', event_id=events[1].EventID)}}">Details</a>
     </article>
      <article class="cars">
       <h2>{{ events[2].Title }}</h2>
       <p>{{ events[2].EventDate }} at {{ events[2].StartTime }}</p>
-      <a href="/events/3">Details</a>
+      <a href="{{url_for('event_detail', event_id=events[2].EventID)}}">Details</a>
     </article>
     <a href="/">Back</a>
 </body>
