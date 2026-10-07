@@ -5,22 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %} CoderDojo {% endblock %}</title>
+    <link rel="stylesheet" href="{{url_for("static", filename="style.css")}}">
+    {%block head%}{%endblock%}
 </head>
 
 <body>
     <header class="site-header">
         <a class="Logo" href="{{ url_for('home') }}">CoderDojo</a>
         <nav>
+            {% block nav%}
             <a href="{{ url_for('home') }}">Home</a>
             <a href="{{ url_for('event_list') }}">Events</a>
             <a href="{{ url_for('about') }}">About</a>
+            <!--<a href="{{url_for('admin_dashboard')}}">Admin</a>-->
+            {% endblock%}
         </nav>
     </header>
     <main class="container">
         {% block content %} {% endblock %}
     </main>
     <footer class="site-footer">
-        <p>&copy; 2026 CoderDojo Canterbury</p>
+        {% block footer%}<p>&copy; 2026 CoderDojo Canterbury</p> {%endblock%}
     </footer>
 </body>
 

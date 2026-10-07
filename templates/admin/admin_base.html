@@ -1,0 +1,15 @@
+{%extends "base.html" %}
+
+{%block head%}
+<style>.site-header {background: #d11632;  } </style>
+{%endblock%}
+
+{%block nav%}
+{{super()}}
+<a href="{{url_for("admin_dashboard")}}">Admin</a>
+{%endblock%}
+
+{%block content%}
+<div class="admin-banner">Admin area</div>
+{%block admin_content%}{%endblock%}
+{%endblock%}

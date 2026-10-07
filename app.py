@@ -34,7 +34,10 @@ def event_detail (event_id):
             return render_template("event_detail.html", event=event)
     abort(404)
     
-    
+@app.route("/admin")
+def admin_dashboard():
+    total_places = sum(e["Capacity"] for e in events)
+    return render_template("admin/dashboard.html", event_count=len(events), total_places=total_places)    
     
     
 

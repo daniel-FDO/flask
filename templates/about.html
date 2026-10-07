@@ -1,13 +1,18 @@
-{%extends "base.html" %}
-
-{% block title%}About | CoderDojo {% endblock %}
-
+{%extends "base.html" %} {% block title%}About | CoderDojo {% endblock %}
 {%block content%}
 <section class="hero">
-    <h1>About: Chin surgery booking page</h1>
-    <p>book ur chin surgery muthafucka</p>
-    <p>Next session: Chin surgery </p>
-    <img src="{{ url_for('static', filename='images/vini.jpg') }}"  width="600" height="400">
-    <a class="button" href="{{url_for('event_list') }}">book ur chin surgery</a>
+  <h1>About: Chin surgery booking page</h1>
+  <p>book ur chin surgery muthafucka</p>
+  <p>Next session: Chin surgery</p>
+  <img
+    src="{{ url_for('static', filename='images/vini.jpg') }}"
+    width="600"
+    height="400"
+  />
+  <a class="button" href="{{url_for('event_list') }}">
+    book ur chin surgery
+  </a>
 </section>
-{% endblock %}
+{% endblock %} {% block footer%}
+<p>Want a chin surgery? email: chinnicious7@gmail.com</p>
+{{super()}}{%endblock%}

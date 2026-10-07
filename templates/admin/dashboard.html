@@ -1,0 +1,10 @@
+{%extends "admin/admin_base.html"%}
+
+{%block title%}Dashboard | Admin {%endblock%}
+{%block admin_content%}
+<h1>Dashboard</h1>
+<div class="cards">
+  <div class="card stat"><span>{{event_count}}</span> events</div>
+  <div class="card stat"><span>{{total_places}}</span> places in total</div>
+</div>
+{%endblock%}
