@@ -1,27 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoderDojo</title>
-</head>
-<body>
-    <nav>
-        <a href="{{url_for('home') }}">Home</a>
-        <a href="{{url_for('event_list') }}">Events</a>
-        <a href="{{url_for('about') }}">About</a>
-    </nav>
-    <h1>Welcome to {{club_name}}</h1>
-    <p class="shout">{{club_name | title}}</p>
-    <a href="/events">View Events</a>
-    <p>Free coding session for young people ages 7 to 17.</p>
-    <p>{{next_session}}
-    <p class="intro">What we learn</p>
-    <ul>
-        <li>Scratch</li>
-        <li>ME</li>
-        <li>bashing</li>
-    </ul>
-    
-</body>
-</html>
+{%extends "base.html"%}
+{% block title%}Home | CoderDojo {% endblock %}
+
+{%block content%}
+<section class="hero">
+    <h1>Welcome to {{ club_name}}</h1>
+    <pclass="shout">{{ club_name|upper}}</p>
+    <p>Free coding sessions for young people aged 7 to 17.</p>
+    <p>Next session: {{next_session}} </p>
+    <a class="button" href="{{url_for('event_list') }}">See upcoming events</a>
+</section>
+{% endblock %}

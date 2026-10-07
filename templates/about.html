@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | CoderDojo</title>
-</head>
-<body>
-    <h1>About us</h1>
-    <p> We meet in room {{club.Room}} every {{club.Day}}.</p>
-    <p>Ages: {{club.Ages}} </p>
-    <h2> Our mentors</h2>
-    <p>Lead mentor: {{mentors[0]}}</p>
-    <p> All members: {{mentors | join(", ")}}</P>
-    <p> We have {{mentors|length}} mentors.</P>
-</body>
-</html>
+{%extends "base.html" %}
+
+{% block title%}About | CoderDojo {% endblock %}
+
+{%block content%}
+<section class="hero">
+    <h1>About: Chin surgery booking page</h1>
+    <p>book ur chin surgery muthafucka</p>
+    <p>Next session: Chin surgery </p>
+    <img src="{{ url_for('static', filename='images/vini.jpg') }}"  width="600" height="400">
+    <a class="button" href="{{url_for('event_list') }}">book ur chin surgery</a>
+</section>
+{% endblock %}

@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{%extends "base.html"%}
+{% block title%}Event details | CoderDojo {% endblock %}
+{%block content%}
     <h1>{{event.Title}}</h1>
     <table class="details">
     <tr><th>Date</th><td>{{event.EventDate}}</td></tr>
@@ -14,5 +9,4 @@
     <tr><th>Places</th><td>{{event.Capacity}}</td></tr>
     </table>
     <a href="{{ url_for('event_list') }}">Back to all events</a>
-</body>
-</html>
+{% endblock %}
